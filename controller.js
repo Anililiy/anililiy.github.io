@@ -46,7 +46,7 @@ $(document).ready(function () {
         Note that each option is assigned an ID of 1,2 or 3. 
         We will use this ID to check the answer. 
         */
-        $(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div>');
+        /*$(stage).append('<div class="questionText">'+questionBank[questionNumber][0]+'</div><div id="1" class="option">'+q1+'</div><div id="2" class="option">'+q2+'</div><div id="3" class="option">'+q3+'</div>');
         $('.option').click(function(){
 		  if(questionLock==false){
 		  	questionLock=true;	
@@ -61,8 +61,9 @@ $(document).ready(function () {
 		  	}
 		  	setTimeout(function(){changeQuestion()},1000);
 		 }})
+        */
         //$(stage).append('<div class = "questionText">' + questionBank[questionNumber][0] + '</div><div id="1" class="pix"><img src="img/'+q1+'"></div><div id="2" class="pix"><img src="img/'+q2+'"></div><div id="3" class="pix"><img src="img/'+q3+'"></div>');
-        //$('.pix').click(function(){
+        /*$('.pix').click(function(){
             if(questionLock == false){
                 questionLock=true;    
                 //correct answer
@@ -76,7 +77,7 @@ $(document).ready(function () {
           }
           setTimeout(function(){changeQuestion()},1000);
           }})
-        
+        */
         $(stage).append('<div class = "questionText">' + questionBank[questionNumber][0] + '</div>');
         for (i = 1; i < questionBank[questionNumber].length; i++){
             $(stage).append('<div id="' + i + '" class="option">'+options[i-1]+'</div>');
