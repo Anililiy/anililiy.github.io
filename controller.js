@@ -66,6 +66,19 @@ $(document).ready(function () {
 		  	}
 		  	setTimeout(function(){changeQuestion()},1000);
 		 }})
+         $('.pix').click(function(){
+              if(questionLock==false){questionLock=true;    
+              //correct answer
+              if(this.id==rnd){
+               $(stage).append('<div class="feedback1">CORRECT</div>');
+               score++;
+               }
+              //wrong answer    
+              if(this.id!=rnd){
+               $(stage).append('<div class="feedback2">WRONG</div>');
+              }
+              setTimeout(function(){changeQuestion()},1000);
+          }})
     }//displayQuestion
 
     function changeQuestion() {

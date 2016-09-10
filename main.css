@@ -59,6 +59,18 @@ html, body {
     border:#FC0 solid 2px;
     color:#FC0;
 }
+.pix{
+    width:80px;
+    height:80px;
+    margin:15px;
+    float:left;
+    border: 5px solid white;
+    cursor:pointer;
+}
+
+.pix:hover{
+    border:#FC0 solid 5px;
+}
 .spacer{ /* adds a little space between the title and the beginning of the quiz.*/
     height: 30px;
 }
