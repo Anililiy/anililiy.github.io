@@ -36,7 +36,8 @@ html, body {
     height: 50px;
     margin: auto;
     margin-top: 50px;
-    color:#FFF;
+    color:#1a000d;
+    text-align: center;
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     width: 800px;
@@ -46,7 +47,7 @@ html, body {
 /* refer to a class name by a dot (.) */
 .questionText{
     font-size: 27px;
-    color: #FFF
+    color: #1a000d
 }
 .option{
     width: 400px;
