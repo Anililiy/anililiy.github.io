@@ -1,8 +1,8 @@
 html {
-    background-image:url(draw.png), url(bcg/paper.png);
-    background-size: cover, auto;
-    background-repeat: no-repeat, repeat;
-    background-position: center, left top;
+    background-image:url(bcg/draw1.png), url(bcg/draw2.png), url(bcg/paper.png);
+    background-size: 30%, 30%, auto;
+    background-repeat: no-repeat,no-repeat, repeat;
+    background-position: right top, left top, left top;
 }
 html, body { 
     margin : 0;
