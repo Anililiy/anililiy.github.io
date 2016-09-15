@@ -1,5 +1,5 @@
 // we will do the following as soon as the document is ‘ready’ in the browser
-$(document).ready(function () {
+/*$(document).ready(function () {
     const FIRE  = 1;
     const WATER = 2;
     const EARTH = 3;
@@ -81,7 +81,7 @@ $(document).ready(function () {
           setTimeout(function(){changeQuestion()},1000);
           }})
         */
-        $(stage).append('<div class = "questionText">' + questionBank[questionNumber][0] + '</div>');
+        /*$(stage).append('<div class = "questionText">' + questionBank[questionNumber][0] + '</div>');
         for (i = 1; i < questionBank[questionNumber].length; i++){
             $(stage).append('<div id="' + i + '" class="option">'+options[i-1]+'</div>');
         }
@@ -128,3 +128,71 @@ $(document).ready(function () {
     }//display final slide
 
 });
+*/
+$(document).ready(function(){
+    const FIRE  = 1;
+    const WATER = 2;
+    const EARTH = 3;
+    const WIND  = 4;
+
+    var questionNumber = 0;
+    var stage  = "#resultText"; //container for the current question
+    var numberOfQuestions;
+    var score  = 0;
+    var sFire  = 0;
+    var sWater = 0;
+    var sEarth = 0;
+    var sWind  = 0;
+
+    answers = new Object();
+    $('.option').change(function(){
+        var answer = ($(this).attr('value'))
+        var question = ($(this).attr('name'))
+        answers[question] = answer
+    })
+    var item1 = document.getElementById('questions');
+
+    var totalQuestions = $('.questions').length;
+    var currentQuestion = 0;
+    $questions = $('.questions');
+    $questions.hide();
+    $($questions.get(currentQuestion)).fadeIn();
+
+    $('#next').click(function(){
+        $($questions.get(currentQuestion)).fadeOut(function(){
+            currentQuestion = currentQuestion + 1;
+            if(currentQuestion == totalQuestions){
+                displayFinalSlide();
+            }
+            else{
+                $($questions.get(currentQuestion)).fadeIn();
+            }
+        });
+
+    });
+    $('#prev').click(function(){
+        $($questions.get(currentQuestion)).fadeOut(function(){
+            currentQuestion = currentQuestion - 1;
+            if(currentQuestion == totalQuestions){
+                displayFinalSlide();
+            }
+            else{
+                $($questions.get(currentQuestion)).fadeIn();
+            }
+        });
+
+    });
+    function displayFinalSlide(){
+        $("#resultText").append("<div class='resultText'>You have finished the quiz!<br><br>Total questions: "+totalQuestions+"<br>Fire score: "+sFire+"<br>Water score: "+sWater+"<br>Earth score: "+sEarth+"<br>Wind score: "+sWind+"</div>");
+    }//display final slide
+
+});
+
+
+function sum_values(){
+    var the_sum = 0;
+    for (questions in answers){
+        the_sum = the_sum + parseInt(answers[question])
+    }
+    return the_sum
+}
