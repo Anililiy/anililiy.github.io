@@ -28,9 +28,12 @@ $(document).ready(function () {
             questionBank[i][4] = data.quizlist[i].option4;
         }
         numberOfQuestions = questionBank.length;
-        displayQuestion();        
+        displayQuestion();
+        $(stage).append('<button class = "button" onclick ="'+changeQuestion()+'"> < Previous </button>');
+        $(stage).append('<button class = "button"> Next > </button>');        
     })//getJSON
 
+    //$("button[name='Next']").click(displayQuestion);
     function displayQuestion(){
         var options = new Array();
         for (i = 1; i < questionBank[questionNumber].length; i++){
@@ -101,31 +104,24 @@ $(document).ready(function () {
                 $(stage).append('<div class="feedback1"> Got it! </div>');
                 sWind++;
             }
-            setTimeout(function(){changeQuestion()},1000);
+            //setTimeout(function(){changeQuestion()},1000);
          }})
+        
     }//displayQuestion
-
-    function changeQuestion() {
+    
+    function changeQuestion(){
+        
         questionNumber++;
-        if (stage == "#game1"){
-            stage2 = "#game1";
-            stage  = "#game2";
-        }
-        else {
-            stage2 = "#game2";
-            stage  = "#game1";
-        }
-        if (questionNumber < numberOfQuestions) {
-            displayQuestion();
-        }
-        else {
-            displayFinalSlide();
-        }
-        $(stage2).animate({"right": "+=800px"},"slow", function()
-         {$(stage2).css('right','-800px');$(stage2).empty();});
-         $(stage).animate({"right": "+=800px"},"slow", function() 
-         { questionLock=false;});
+    
+    if(stage=="#game1"){stage2="#game1";stage="#game2";}
+        else{stage2="#game2";stage="#game1";}
+    
+    if(questionNumber<numberOfQuestions){displayQuestion();}else{displayFinalSlide();}
+    
+     $(stage2).animate({"right": "+=800px"},"slow", function() {$(stage2).css('right','-800px');$(stage2).empty();});
+     $(stage).animate({"right": "+=800px"},"slow", function() {questionLock=false;});
     }//change question
+    
 
     function displayFinalSlide(){
         $(stage).append("<div class='questionText'>You have finished the quiz!<br><br>Total questions: "+numberOfQuestions+"<br>Fire score: "+sFire+"<br>Water score: "+sWater+"<br>Earth score: "+sEarth+"<br>Wind score: "+sWind+"</div>");
