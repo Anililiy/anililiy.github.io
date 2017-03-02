@@ -20,10 +20,9 @@ footer {
 }
 
 /* refer to an ID name by a hashtag (#) */
-#mainContent{ /* outer container, holding game1 and game2, which will contain the current and next questions */
+#mainContent{ 
     margin-left: 20%;
     margin-right: 20%;
-    position: relative;
 }
 #navContent{ /* outer container, holding game1 and game2, which will contain the current and next questions */
     margin: auto;
