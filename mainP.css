@@ -5,8 +5,9 @@ html {
     background-position: right top, left top, left top;
 }
 body{
-    margin-left: 300px;
-    margin-right: 300px;
+    margin :auto;
+    /*margin-left: 300px;
+    margin-right: 300px;*/
 }
 html, body { 
     
