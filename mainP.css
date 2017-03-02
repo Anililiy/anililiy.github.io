@@ -1,9 +1,9 @@
-/*html {
-    background-image:url(bcg/bord1.png), url(bcg/bord2.png), url(bcg/paper.png);
-    background-size: 30%, 30%, auto;
-    background-repeat: no-repeat,no-repeat, repeat;
-    background-position: right top, left top, left top;
-}*/
+html {
+    background-image:url(bcg/bord1.png), url(bcg/bord2.png)];
+    background-size: 30%, 30%;
+    background-repeat: no-repeat,no-repeat;
+    background-position: right top, left top;
+}
 html, body { 
     margin:0;
     padding: 0;
