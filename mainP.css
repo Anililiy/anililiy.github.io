@@ -15,9 +15,8 @@ html, body {
 /*Creating footer*/
 footer {
     width : 100%;
-    height : 100px;
+    height : 40px;
     background-color : #4286f4;
-    padding :60px 0px;
 }
 
 /* refer to an ID name by a hashtag (#) */
