@@ -5,11 +5,10 @@ html {
     background-position: right top, left top, left top;
 }
 body{
-    margin-left: 20%;
-    margin-right: 20%;
+    /*margin-left: 20%;
+    margin-right: 20%;*/
 }
 html, body { 
-    
     padding: 0;
     font-family: Arial, Helvetica, sans-serif; 
 }
@@ -21,6 +20,11 @@ footer {
 }
 
 /* refer to an ID name by a hashtag (#) */
+#mainContent{ /* outer container, holding game1 and game2, which will contain the current and next questions */
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+}
 #navContent{ /* outer container, holding game1 and game2, which will contain the current and next questions */
     margin: auto;
     width:  800px;
