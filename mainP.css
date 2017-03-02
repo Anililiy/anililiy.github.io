@@ -28,6 +28,7 @@ footer {
 #mainContent{ 
     margin-left: 20%;
     margin-right: 20%;
+    background-color : #f4ffff;
 }
 #navContent{ /* outer container, holding game1 and game2, which will contain the current and next questions */
     margin: auto;
