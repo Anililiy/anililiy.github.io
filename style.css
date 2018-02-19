@@ -1,0 +1,97 @@
+/* style.css */
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    background: hsl(0.0, 0.0%, 20.2%);
+    color: black;
+    font-size: 15px;
+    font-family: Arial;
+    margin: 0;
+}
+
+h1 {
+    font-family: Verdana;
+    color: #fffff0;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: Verdana;
+    color: #CE2D4F;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4056F4;
+}
+
+a:hover {
+    text-decoration: none;
+    color: hsl(0.0, 100.0%, 50.0%);
+}
+
+#banner {
+    text-align: center;
+    /*background-image: url('https://source.unsplash.com/random');*/
+    /*background-image: url('images/background.jpg');*/
+    background-image: url('https://images.unsplash.com/photo-1516834474-48c0abc2a902?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=32aef9066b8a72c0cd9dec2de5478e12');
+    /*box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;*/
+    padding: 150px;
+    background-size: cover;
+    height: 100vh;
+}
+
+#banner p {
+    color: #fffff0;
+}
+
+#butterfly_container{
+  padding: 2px 16px;
+}
+img.a {
+    width: 100px;
+    height:100px;
+    position:fixed;
+}
+#butterfly {
+  border-radius: 5px 5px 0 0;
+}
+
+.card {
+    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    background: #6E315C;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 100px 20px 0;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+footer ul {
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: hsl(0.0, 0.0%, 100.0%);
+}
